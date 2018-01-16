@@ -1,0 +1,12 @@
+pipeline:
+  build:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
+  publish:
+    image: plugins/docker
+    repo: lixw/drone-test
+    tags: [ latest, 1, 1.0, 1.0.0 ]
+      
