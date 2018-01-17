@@ -1,5 +1,10 @@
 pipeline:
-  build:
+  slack:
+    image: plugins/slack
+    channel: dev
+    when:
+      branch: master
+  build: 
     image: golang:1.7.1
     commands:
       - go get
@@ -9,5 +14,5 @@ pipeline:
     image: plugins/docker
     repo: lixw/drone-test
     tags: [ latest, 1, 1.0, 1.0.0 ]
- branches: [ dev ]
+
       
