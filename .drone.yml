@@ -1,7 +1,4 @@
 pipeline:
-  notify:
-    image: plugins/slack
-    channel: dev
   build: 
     image: golang:1.7.1
     commands:
