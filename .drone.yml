@@ -1,4 +1,5 @@
 pipeline:
+  branches: dev
   build:
     image: golang:1.7.1
     commands:
